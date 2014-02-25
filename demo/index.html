@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../jquery.coveraxis.js"></script>
+<style>
+	.coveraxis {
+		background-image: url('images/hood-black-plain-face.jpg');
+		background-size: cover;
+		height: 600px;
+		background-color: #eee;
+	}
+	.ex2 {
+		background-image: url('images/Layer8.jpg');
+		height: 400px;
+	}
+</style>
+</head>
+<body>
+<h1>jquery.coveraxis</h1>
+<p>Click the image to set a new axis point</p>
+<div class="coveraxis" data-axis-x=".8" data-axis-y=".8"></div>
+<br>
+<div class="coveraxis ex2" data-axis-x=".8" data-axis-y=".67"></div>
+<script>
+	$(window).ready(function () {
+		$('.coveraxis').coverAxis();
+		$('.coveraxis').click($.fn.setCoverAxis);
+	});
+</script>
+</body>
+</html>
